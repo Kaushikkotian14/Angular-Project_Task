@@ -1,0 +1,28 @@
+
+  <input matInput placeholder="Search..." [(ngModel)]="term" class="search-input"  (ngModelChange)="onSearch()" />
+  <span><button (click)="onSearch()" [disabled]="!term" >Search</button> </span>
+ <p>{{ result }}</p>
+
+<mat-grid-list cols="3" rowHeight="1:1" gutterSize="24px">
+    <mat-grid-tile *ngFor="let book of books">
+        <mat-card class="book-item">
+            <mat-card-header>
+                <mat-card-title>Title: {{ book.title }}</mat-card-title>
+                <mat-card-subtitle>Author: {{ book.author }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [ngStyle]='{ width: "80%", height: "auto", alignSelf: "center" }' [src]="book.imgUrl" alt="{{ book.title }}">
+            <mat-card-content>
+                <p>Description: {{ book.description }}</p>
+            </mat-card-content>
+            <mat-card-content>
+                <p [ngStyle]="{ color: book.Available ? 'green' : 'red' }"><b>Availability: {{ book.Available ? 'In Stock' : 'Out of Stock' }}</b></p>
+            </mat-card-content>
+            <mat-card-content>
+                <p>Price: {{ book.price | currency:'INR' }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" [disabled]="!book.Available">Add to Cart</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

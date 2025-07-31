@@ -1,0 +1,33 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent {
+ term: string = ''; 
+ result: string = '';
+
+ onSearch() {
+  if (!this.term) {
+      this.result = '';
+      return;
+    }
+   this.result = `You searched for: ${this.term}`;
+}
+
+ 
+ 
+books = [
+  { title: 'Mahabharata', author: 'Vyasa', price: 500, description: 'Epic battle of Kurukshetra unfolds', imgUrl:'/assets/img3.png', Available: true },
+  { title: 'Ramayana', author: 'Valmiki', price: 600, description: 'Rama’s journey to rescue Sita',imgUrl:'/assets/img3.png', Available: true },
+  { title: 'Bhagavad Gita', author: 'Vyasa', price: 700,imgUrl:'/assets/img3.png', description: 'Krishna imparts wisdom to Arjuna', Available: true },
+  { title: 'Upanishads', author: 'Various', price: 800,imgUrl:'/assets/img3.png', description: 'Philosophical texts exploring ultimate reality', Available: true },
+  { title: 'Vedas', author: 'Various', price: 900,imgUrl:'/assets/img3.png', description: 'Ancient hymns and spiritual knowledge', Available: false },
+  { title: 'Puranas', author: 'Various', price: 1000,imgUrl:'/assets/img3.png', description: 'Mythological texts narrating the history of the universe', Available: false },
+  
+];
+
+}
+
