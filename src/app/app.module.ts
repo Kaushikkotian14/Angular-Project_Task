@@ -11,7 +11,8 @@ import { LoginComponent } from './component/login/login.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { HomeComponent } from './component/home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { BooksService } from './services/books.service';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -46,10 +47,11 @@ import { MatGridListModule} from '@angular/material/grid-list';
     MatIconModule ,
     MatTabsModule,
     ReactiveFormsModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

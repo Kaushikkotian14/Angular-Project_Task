@@ -1,14 +1,12 @@
     <mat-toolbar color="primary" >
         <span >BookMart</span>
-        <span class="spacer"></span>
         <input matInput placeholder="Search..." [(ngModel)]="term" class="search-input"  (ngModelChange)="onSearch()" />
         <span><button (click)="onSearch()" [disabled]="!term">Search</button></span>
-        
-        <button mat-button routerLink="/home">Home</button> 
-        <button mat-button routerLink="/about">About Us</button>
-        <button mat-button routerLink="/contact">Contact</button>
-        <button mat-button routerLink="/login">Login</button>
-        <button mat-button routerLink="/register">Register</button>
+        <button mat-button routerLink="home">Home</button> 
+        <button mat-button routerLink="about">About Us</button>
+        <button mat-button routerLink="contact">Contact</button>
+        <button mat-button routerLink="login">Login</button>
+        <button mat-button routerLink="register">Register</button>
         <button mat-button routerLink="login">Logout</button>
     </mat-toolbar>
     {{result}}

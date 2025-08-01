@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-registration',
@@ -9,10 +9,9 @@ import { inject } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-  router = inject(Router);
- form :FormGroup ;
+ form :FormGroup;
 
- constructor(private fb: FormBuilder) {
+ constructor(private fb: FormBuilder, private router: Router) {
    this.form = this.fb.group({
       fullname: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
