@@ -7,14 +7,5 @@ import { Component,ElementRef,ViewChild } from '@angular/core';
 })
 export class HeaderComponent {
  
-  
-  term='';
-  result='';
-onSearch() {
-  if (!this.term) {
-      this.result = '';
-      return;
-    }
- return this.result = `You searched for header: ${this.term}`;
-}
+ 
 }

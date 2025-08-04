@@ -13,25 +13,14 @@ import { Book } from 'src/app/model/books.model';
 
 export class HomeComponent implements OnInit {
 books: Book[] = [];
- term: string = ''; 
- result: string = '';
+ 
 constructor(private booksService: BooksService) { }
 ngOnInit() {
   this.booksService.getBooks().subscribe(books => {
     this.books = books;
+    console.log(this.books);
   });
 }
-onSearch() {
-  if (!this.term) {
-      this.result = '';
-      return;
-    }
-   this.result = `You searched for: ${this.term}`;
-}
-
- 
- 
-
-
+  
 }
 
