@@ -1,0 +1,4 @@
+<input matInput placeholder="Search..." [(ngModel)]="term" class="search-input"  (ngModelChange)="onSearch()" />
+  <span><button #searchButton  (click)="onSearch()" [disabled]="!term" >Search</button> </span><br>
+  {{result}}
+ 

@@ -1,9 +1,10 @@
+<app-search ></app-search>
 
-  <input matInput placeholder="Search..." [(ngModel)]="term" class="search-input"  (ngModelChange)="onSearch()" />
-  <span><button (click)="onSearch()" [disabled]="!term" >Search</button> </span>
- <p>{{ result }}</p>
+  <app-loading [msg]="'books'" ></app-loading>
 
-<mat-grid-list cols="3" rowHeight="1:1" gutterSize="24px">
+  <!-- <app-table [dataSource]="books"></app-table> -->
+
+<mat-grid-list cols="3" rowHeight="1:1" gutterSize="24px" class="book-grid">
     <mat-grid-tile *ngFor="let book of books">
         <mat-card class="book-item">
             <mat-card-header>

@@ -1,18 +1,15 @@
-.search-input {
-    margin : 20px auto;
-    width : 50%;
-    height: auto;
-}
-
-
 
     .book-item {
         width: 60%;
-        
         margin: 10px auto;
         text-align: center;
         border: 1px solid #0a0a0a;
         padding: 10px;
         background-color: rgb(233, 249, 249);
-        
+        border: #0a0a0a 1px solid;
       }
+
+      .book-grid {
+        margin-top:2%;
+      }
+      
