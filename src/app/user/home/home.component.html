@@ -1,8 +1,10 @@
-<app-search ></app-search>
+<app-search ></app-search> 
 
-  <app-loading [msg]="'books'" ></app-loading>
+  <!-- <app-loading [msg]="'books'" ></app-loading> -->
 
-  <!-- <app-table [dataSource]="books"></app-table> -->
+ <br>  <button mat-raised-button color="primary" (click)="showTable()">{{!table? 'Show Table':'Hide Table'}}</button>
+   <ng-container *ngIf="table">   <app-table  [dataSource]="books" [displayedColumns]="colums" ></app-table></ng-container>
+
 
 <mat-grid-list cols="3" rowHeight="1:1" gutterSize="24px" class="book-grid">
     <mat-grid-tile *ngFor="let book of books">
@@ -15,14 +17,17 @@
             <mat-card-content>
                 <p>Description: {{ book.description }}</p>
             </mat-card-content>
+                        <mat-card-content>
+                <p>Quantity: {{ book.quantity }}</p>
+            </mat-card-content>
             <mat-card-content>
-                <p [ngStyle]="{ color: book.Available ? 'green' : 'red' }"><b>Availability: {{ book.Available ? 'In Stock' : 'Out of Stock' }}</b></p>
+                <p [ngStyle]="{ color: book.quantity ? 'green' : '  red' }"><b>Availability: {{ book.quantity ? 'In Stock' : 'Out of Stock' }}</b></p>
             </mat-card-content>
             <mat-card-content>
                 <p>Price: {{ book.price | currency:'INR' }}</p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-raised-button color="primary" [disabled]="!book.Available">Add to Cart</button>
+                <button mat-raised-button color="primary" [disabled]="!book.quantity">Add to Cart</button>
             </mat-card-actions>
         </mat-card>
     </mat-grid-tile>

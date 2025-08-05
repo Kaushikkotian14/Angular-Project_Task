@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { inject } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -20,11 +18,23 @@ export class LoginComponent {
       password: ['', Validators.required]
     });
   }
-
+  
   onSubmit() {
+    const username = this.loginForm.get('username')?.value;
+    const password = this.loginForm.get('password')?.value;
+     
     if (this.loginForm.valid) {
      alert('Login successful!');
+     if( username === "admin" && password === "1234"){
+      localStorage.setItem('username', username);
+      localStorage.setItem('role', 'admin');
+      this.router.navigate(['/admin']);
+     }
+     else{
+     localStorage.setItem('username', username);
+     localStorage.setItem('role', 'user');
       this.router.navigate(['/home']);
     }
+  }
   }
 }

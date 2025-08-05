@@ -10,6 +10,7 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { BooksService } from './services/books.service';
 import { UserModule } from './user/user.module';
 import { SharedModule } from './shared/shared.module';
+import { AdminComponent } from './component/admin/admin.component';
 
 
 
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    RegistrationComponent 
+    RegistrationComponent,
+    AdminComponent 
   ],
   imports: [
     BrowserModule,
