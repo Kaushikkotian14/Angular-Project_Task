@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatTable, MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,7 +10,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import { MatGridListModule} from '@angular/material/grid-list';
-import { MatTableDataSource } from '@angular/material/table';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -41,6 +40,7 @@ import { LoadingComponent } from './loading/loading.component';
   exports: [
     CommonModule,
     LoadingComponent,
+    TableComponent,
     MatProgressSpinnerModule,
     MatToolbarModule,
     MatButtonModule,

@@ -13,14 +13,24 @@ import { Book } from 'src/app/model/books.model';
 
 export class HomeComponent implements OnInit {
 books: Book[] = [];
- 
+colums:string[] =['title', 'author', 'description', 'price','quantity', 'availability'];
+table:boolean =false; 
 constructor(private booksService: BooksService) { }
 ngOnInit() {
+   this.getBooks();
+}
+
+showTable(){
+  this.table=!this.table;
+}
+
+getBooks(){
   this.booksService.getBooks().subscribe(books => {
     this.books = books;
     console.log(this.books);
   });
+
 }
-  
+
 }
 

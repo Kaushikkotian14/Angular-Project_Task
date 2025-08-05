@@ -1,10 +1,106 @@
 {
-    "books": [
-        { "title": "Mahabharata", "author": "Vyasa", "price": 500, "description": "Epic battle of Kurukshetra unfolds", "imgUrl": "/assets/img3.png", "Available": true },
-        { "title": "Ramayana", "author": "Valmiki", "price": 600, "description": "Rama’s journey to rescue Sita", "imgUrl": "/assets/img3.png", "Available": true },
-        { "title": "Bhagavad Gita", "author": "Vyasa", "price": 700, "imgUrl": "/assets/img3.png", "description": "Krishna imparts wisdom to Arjuna", "Available": true },
-        { "title": "Upanishads", "author": "Various", "price": 800, "imgUrl": "/assets/img3.png", "description": "Philosophical texts exploring ultimate reality", "Available": true },
-        { "title": "Vedas", "author": "Various", "price": 900, "imgUrl": "/assets/img3.png", "description": "Ancient hymns and spiritual knowledge", "Available": false },
-        { "title": "Puranas", "author": "Various", "price": 1000, "imgUrl": "/assets/img3.png", "description": "Mythological texts narrating the history of the universe", "Available": false }
-    ]
+  "books": [
+    {
+      "title": "Mahabharata",
+      "author": "Vyasa",
+      "price": 500,
+      "description": "Epic battle of Kurukshetra unfolds",
+      "imgUrl": "/assets/img3.png",
+      "quantity": 12
+    },
+    {
+      "title": "Ramayana",
+      "author": "Valmiki",
+      "price": 600,
+      "description": "Rama’s journey to rescue Sita",
+      "imgUrl": "/assets/img3.png",
+      "quantity": 15
+    },
+    {
+      "title": "Bhagavad Gita",
+      "author": "Vyasa",
+      "price": 700,
+      "imgUrl": "/assets/img3.png",
+      "description": "Krishna imparts wisdom to Arjuna",
+      "quantity": 8
+    },
+    {
+      "title": "Upanishads",
+      "author": "Various",
+      "price": 800,
+      "imgUrl": "/assets/img3.png",
+      "description": "Philosophical texts exploring ultimate reality",
+      "quantity": 5
+    },
+    {
+      "title": "Vedas",
+      "author": "Various",
+      "price": 900,
+      "imgUrl": "/assets/img3.png",
+      "description": "Ancient hymns and spiritual knowledge",
+      "quantity": 0
+    },
+    {
+      "title": "Puranas",
+      "author": "Various",
+      "price": 1000,
+      "imgUrl": "/assets/img3.png",
+      "description": "Mythological texts narrating the history of the universe",
+      "quantity": 0
+    },
+    {
+      "id": "c1be",
+      "title": "s",
+      "author": "z",
+      "description": "xx",
+      "price": 2,
+      "quantity": 3,
+      "imgUrl": "/assets/img3.png"
+    },
+    {
+      "id": "fd03",
+      "title": "y",
+      "author": "h",
+      "description": "u",
+      "price": 4,
+      "quantity": 6,
+      "imgUrl": "/assets/img3.png"
+    },
+    {
+      "id": "01db",
+      "title": "asdaas",
+      "author": "as",
+      "description": "a",
+      "price": 12,
+      "quantity": 1212,
+      "imgUrl": "/assets/img3.png"
+    },
+    {
+      "id": "826b",
+      "title": "h",
+      "author": "j",
+      "description": "u",
+      "price": 12,
+      "quantity": 12,
+      "imgUrl": "/assets/img3.png"
+    },
+    {
+      "id": "d331",
+      "title": "1",
+      "author": "2",
+      "description": "2",
+      "price": 34,
+      "quantity": 3,
+      "imgUrl": "/assets/img3.png"
+    },
+    {
+      "id": "194d",
+      "title": "aj",
+      "author": "s",
+      "description": "s",
+      "price": 2,
+      "quantity": 2,
+      "imgUrl": "/assets/img3.png"
+    }
+  ]
 }

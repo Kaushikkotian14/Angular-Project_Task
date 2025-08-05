@@ -4,6 +4,7 @@ export interface Book {
     price: number;
     description: string;
     imgUrl: string;
-    Available: boolean;
+    quantity:number;
+    Available: string;
 }
 
