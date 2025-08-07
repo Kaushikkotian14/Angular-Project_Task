@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksService } from 'src/app/services/books.service';
-import { BehaviorSubject } from 'rxjs';
-
-
 
 @Component({
   selector: 'app-header',
@@ -11,25 +8,25 @@ import { BehaviorSubject } from 'rxjs';
 })
 
 export class HeaderComponent implements OnInit {
-  isLoggedIn: boolean = false;
+  isLoggedIn: boolean ;
   constructor(private booksService:BooksService){}
   ngOnInit(): void {
-    this.checkLogInState();
+    this.state();
+
     }
 
-    checkLogInState(){
-    if(localStorage.getItem('username')){
-    this.booksService.auth.next(true);
-    this.isLoggedIn = this.booksService.auth.value;
-    }else {
-      this.isLoggedIn = false;
+    state(){
+      this.booksService.isLoggedIn.subscribe(
+        auth => this.isLoggedIn=auth
+      )
+      console.log('state',this.isLoggedIn);
     }
-    }
- 
+  
  
  logout(){
   localStorage.removeItem('username');
   localStorage.removeItem('role');
-  this.checkLogInState();
+  this.booksService.auth.next(false);
+     console.log('logout',this.booksService.auth.value);
  }
 }
