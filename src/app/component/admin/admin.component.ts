@@ -48,6 +48,8 @@ books:Book[]= [];
   });
 
 }
+
+
  
   
 
@@ -58,8 +60,12 @@ books:Book[]= [];
       this.bookService.addBook(this.book).subscribe({
         next:()=>{
          alert("Book Added Sucessfully!!");
+         this.getBooks();
         }
+        
+        
       })
+      this.form.reset()
       console.log(this.form);
       console.log(this.book);
     }
